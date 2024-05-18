@@ -27,11 +27,15 @@ export class AppComponent implements OnInit, DoCheck {
     if (index !== -1) {
       this.listaDeCompra.splice(index, 1);
     } else {
-      throw new Error(`Item com id ${id} não encontrado.`)
+      throw new Error(`Item com id ${id} não encontrado.`);
     }
   }
 
   ngDoCheck(): void {
     this.listaService.atualizarLocalStorage();
+  }
+
+  limparLista() {
+    this.listaDeCompra = [];
   }
 }
