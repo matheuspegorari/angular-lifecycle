@@ -39,7 +39,6 @@ export class InputComponent implements OnInit, OnChanges {
       this.textoBtn = 'Editando item';
       this.valorItem = this.itemQueVaiSerEditado?.nome;
     }
-    console.log('Changes' + changes['itemQueVaiSerEditado'].currentValue);
   }
 
   adicionarItem() {
